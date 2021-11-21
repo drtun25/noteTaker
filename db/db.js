@@ -37,3 +37,5 @@ class Db {
             .then(() => newNote);
     }
 }
+
+module.exports = new Db();
