@@ -61,7 +61,7 @@ const handleNoteSave = function() {
   };
 
 const handleNoteDelete = function(event) {
-  // prevents the click listener for the list from being called when the button inside of it is clicked
+  
   event.stopPropagation();
 
   const note = $(this)
@@ -76,5 +76,16 @@ const handleNoteDelete = function(event) {
     getAndRenderNotes();
     renderActiveNote();
   });
+};
+
+
+const handleNoteView = function() {
+  activeNote = $(this).data();
+  renderActiveNote();
+};
+
+const handleNewNoteView = function() {
+  activeNote = {};
+  renderActiveNote();
 };
 
